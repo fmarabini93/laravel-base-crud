@@ -42,6 +42,8 @@ class ComicController extends Controller
         //
     }
 
+    
+
     /**
      * Display the specified resource.
      *

@@ -10,7 +10,7 @@
     </head>
     <body class="edit">
         <div class="container">
-            <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="POST">
+            <form action="{{ route('comics.update', $comic->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">

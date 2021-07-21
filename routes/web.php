@@ -20,3 +20,5 @@ Route::get('comics.show', 'ComicController@show');
 Route::get('comics.edit', 'ComicController@edit');
 Route::get('comics.create', 'ComicController@create');
 Route::post('comics.store', 'ComicController@store');
+Route::put('comics.update', 'ComicController@update');
+Route::delete('comics.destroy', 'ComicController@destroy');

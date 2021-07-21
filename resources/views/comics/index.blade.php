@@ -27,11 +27,11 @@
                             <th scope="row">{{ $comic['title'] }}</th>
                             <td><a href="{{ route('comics.show', $comic->id) }}"><button><i class="fas fa-search"></i></button></a></td>
                             <td><a href="{{ route('comics.edit', $comic->id) }}"><button><i class="fas fa-exchange-alt"></i></button></a></td>
-                            <form action="{{ route('comics.destroy', ['id'=>$comic->id]) }}" method="POST">
+                            <td><form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <input type="submit" value="Delete">
-                            </form>
+                                <input type="submit" value="Delete" onclick="return confirm('Are you sure?')">
+                            </form></td>
                         </tr>
                     @endforeach
                 </tbody>

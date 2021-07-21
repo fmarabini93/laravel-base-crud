@@ -27,7 +27,11 @@
                             <th scope="row">{{ $comic['title'] }}</th>
                             <td><a href="{{ route('comics.show', $comic->id) }}"><button><i class="fas fa-search"></i></button></a></td>
                             <td><a href="{{ route('comics.edit', $comic->id) }}"><button><i class="fas fa-exchange-alt"></i></button></a></td>
-                            <td><button><i class="fas fa-trash"></i></button></td>
+                            <form action="{{ route('comics.destroy', ['id'=>$comic->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete">
+                            </form>
                         </tr>
                     @endforeach
                 </tbody>

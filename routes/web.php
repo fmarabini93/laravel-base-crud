@@ -17,3 +17,6 @@ Route::resource('comics', 'ComicController');
 
 Route::get('/', 'ComicController@index');
 Route::get('comics.show', 'ComicController@show');
+Route::get('comics.edit', 'ComicController@edit');
+Route::get('comics.create', 'ComicController@create');
+Route::post('comics.store', 'ComicController@store');

@@ -26,12 +26,13 @@
                         <tr>
                             <th scope="row">{{ $comic['title'] }}</th>
                             <td><a href="{{ route('comics.show', $comic->id) }}"><button><i class="fas fa-search"></i></button></a></td>
-                            <td><button><i class="fas fa-exchange-alt"></i></button></td>
+                            <td><a href="{{ route('comics.edit', $comic->id) }}"><button><i class="fas fa-exchange-alt"></i></button></a></td>
                             <td><button><i class="fas fa-trash"></i></button></td>
                         </tr>
                     @endforeach
                 </tbody>
               </table>
+              <a href="{{ route('comics.create') }}"><button>Insert new comic</button></a>
         </div>
     </body>
 </html>

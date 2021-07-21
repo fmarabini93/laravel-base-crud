@@ -10,7 +10,7 @@
         <title>{{ $title }}</title>
     </head>
     <body>
-        @include('partials/header')
+        @include('partials.header')
         <div class="container">
             <table class="table">
                 <thead>
@@ -25,7 +25,7 @@
                     @foreach($comics as $comic)
                         <tr>
                             <th scope="row">{{ $comic['title'] }}</th>
-                            <td><button><i class="fas fa-search"></i></button></td>
+                            <td><a href="{{ route('comics.show', $comic->id) }}"><button><i class="fas fa-search"></i></button></a></td>
                             <td><button><i class="fas fa-exchange-alt"></i></button></td>
                             <td><button><i class="fas fa-trash"></i></button></td>
                         </tr>
